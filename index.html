@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バッティングセンター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>バッティングセンター</h1>
+
+    <section class="score">
+      <p>スコア：<span id="score">0</span></p>
+      <p>ヒット：<span id="hits">0</span></p>
+      <p>ホームラン：<span id="homeRuns">0</span></p>
+      <p>残り：<span id="ballsLeft">10</span>球</p>
+    </section>
+
+    <div class="game">
+      <canvas id="canvas" width="900" height="500"></canvas>
+
+      <div class="controls">
+        <p id="message">投球ボタンでスタート</p>
+
+        <label>
+          球速
+          <select id="speed">
+            <option value="80">80 km/h</option>
+            <option value="100" selected>100 km/h</option>
+            <option value="120">120 km/h</option>
+          </select>
+        </label>
+
+        <button id="pitchButton">⚾ 投球</button>
+        <button id="swingButton" disabled>🏏 スイング</button>
+        <button id="resetButton">リセット</button>
+
+        <p class="help">ボールがバットの近くに来たらスイング！<br>Spaceキーでも打てます。</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

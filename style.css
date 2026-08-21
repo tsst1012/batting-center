@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  background: #101827;
+}
+
+main {
+  width: min(1050px, 95%);
+  margin: 30px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.score p {
+  margin: 0;
+  padding: 10px 15px;
+  background: #1d2a40;
+  border-radius: 8px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 1fr 210px;
+  gap: 15px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  background: #79b9e8;
+  border-radius: 10px;
+}
+
+.controls {
+  padding: 15px;
+  background: #1d2a40;
+  border-radius: 10px;
+}
+
+.controls label,
+.controls select,
+.controls button {
+  display: block;
+  width: 100%;
+}
+
+.controls select,
+.controls button {
+  margin-top: 8px;
+  padding: 10px;
+}
+
+.controls button {
+  cursor: pointer;
+}
+
+#pitchButton {
+  background: #ffc13b;
+  border: 0;
+}
+
+#swingButton {
+  color: white;
+  background: #e75a32;
+  border: 0;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.help {
+  color: #c7d0df;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 750px) {
+  .game {
+    grid-template-columns: 1fr;
+  }
+}
